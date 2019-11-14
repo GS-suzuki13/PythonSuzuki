@@ -12,7 +12,7 @@ resultado2 = n1 - n2
 resultado3 = n1 * n2
 resultado4 = n1 / n2
 
-print(f'A soma é {resultado1} 'end' a sub é {resultado2} 'end' a mult {resultado3} 'end' e a div {resultado4}')
+print(f'A soma é {resultado1} a sub é {resultado2} a mult {resultado3} e a div {resultado4}')
 
 if(n1)==(n2):
     print(f'Os númreos são iguais')
