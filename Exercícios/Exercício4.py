@@ -18,6 +18,3 @@ for i in range(1,3):
 
 for jogadores in jogador:
     print('='*50, '\n',f"Jogador: {jogadores['Nome']} \n Posição: {jogadores['Posicao']} \n Número: {jogadores['Numero']} \n PernaBoa: {jogadores['PernaBoa']}", '\n', '='*50)
-
-    
-    
