@@ -17,6 +17,3 @@ def calculo_porcentagem (juros_dividido):
 def calculo_mensal (investido, juros_dividido):
     restante = (investido * ((1 + juros_dividido)**1)) - investido
     return restante
-    
-
-# Save all
