@@ -14,9 +14,23 @@ cadastroHBSIS = ['nome',   ['Alex'   ,'Paulo'  ,'Pedro'  ,'Mateus' ,'Carlos' ,'J
 # idade Carlos é 15 anos
 # email de Mateus é d@d.com
 
+print(f'''Nome: {cadastroHBSIS[1][0]}       |   Telefone: {cadastroHBSIS[3][0]}
+Email: {cadastroHBSIS[5][0]}   |   Idade: {cadastroHBSIS[7][0]}''')
+
+
 
 # 2 - usando o for, imprima todos nomes um abaixo do outro
-#
-# 3 - Usando a indexação faça uma lista com 3 bibliotecas contendo os dados 
+lista_nome = (cadastroHBSIS[1])
+for nome in lista_nome:
+    print(nome)
+
+# 3 - Usando a indexação faça uma lista com 3 dicionarios contendo os dados 
 # do Mateus, Paulo # e João contendo
 # como chaves: nome, email, idade, telefone (nesta  sequencia)
+
+dicio_mateus = {f"Nome: {cadastroHBSIS[1][3]}   |   Email: {cadastroHBSIS[3][3]}\nIdade: {cadastroHBSIS[7][4]}   |   Telefone: {cadastroHBSIS[5][3]}  "}
+dicio_paulo = {f"Nome: {cadastroHBSIS[1][1] }    |   Email: {cadastroHBSIS[3][1]}\nIdade: {cadastroHBSIS[7][1]}   |   Telefone: {cadastroHBSIS[5][1]}  "}
+dicio_joao = {f"Nome: {cadastroHBSIS[1][5]}     |   Email: {cadastroHBSIS[3][5]}\nIdade: {cadastroHBSIS[7][5]}   |   Telefone: {cadastroHBSIS[5][5]}  "}
+
+print(f"{dicio_mateus}\n{dicio_paulo}\n{dicio_joao}")
+

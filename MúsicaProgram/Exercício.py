@@ -1,23 +1,18 @@
 from musica import criar_musica, salvar_musica, ler_musica
 
 
-
-
 musica = []
 album = []
 artista = []
 
 menu = '''
 ===================================================================================
-=                        I Festival de Cerveja em Itororó                         =
+=                        I Festival de Música em Itororó                         =
 ===================================================================================
 
 1 - Cadasto de Música
 2 - Cadastro de Album
 3 - Cadastro de Artsista
-4 - Ver Músicas Cadastradas
-5 - Ver Albuns Cadastrados
-6 - Ver Artistas Cadastrados
 7 - Sair
 
 Digite a opção desejada: '''
@@ -47,13 +42,17 @@ while True:
             if opcao == '1':
                 faixa1 = criar_musica(musica)
                 salvar_musica(faixa1)
-                lista = ler_musica()
-            for n, musica in enumerate(lista, start=1):
+            som = ler_musica()
+            for n, musica in enumerate(som, start=1):
+                # n = lista_musica()
+                # musica = start
+                
                 print(f"{n}- Música: {musica['musica']}")
 
             if opcao == '2':
+                lista = ler_musica()
                 print( 'Ver Músicas Cadastradas')
-                print(f'As músicas cadastradas são: {musica}')
+                print(f'As músicas cadastradas são: {lista}')
 
                 
             elif opcao == '3':
