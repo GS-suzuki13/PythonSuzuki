@@ -20,7 +20,16 @@
 # 4 - Sempre que acontecer um embarque no avião, apresentar quem está no avião
 # 5 - Deve ser feito em Python
 
-tripulacao_terminal = ['Piloto', 'Oficial 1', 'Oficial 2', 'Chefe de Serviço', 'Comissária 1', 'Comissária 2', 'Policial', 'Maykon']
+def texto_tripula():
+    arquivo = open('29-Aula29/tripulantes.txt')
+    lista = []
+    for linha in arquivo:
+        linha = linha.strip()
+        lista.append(linha)
+    arquivo.close()
+    return lista
+
+tripulacao_terminal = texto_tripula()
 
 mov_ida = '''MOVIMENTAÇÃO FORTWO
 \033[32mTERMINAL   ->   AVIÃO\033[0;0m'''
@@ -58,26 +67,15 @@ def viagem_fortwo():
         trip_aviao.append(tripulacao_terminal.pop(0))
         print(f'\033[32m{aviao} {trip_aviao}\033[0;0m\n')
 
-        
+    
 
 for i in range(0,7):
     viagem_fortwo()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+def salvar_lista_aviao():
+    arq = open('29-Aula29/trip_aviao.txt', 'w')
+    arq.write('')
+    
 
 
 
