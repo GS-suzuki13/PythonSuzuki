@@ -23,9 +23,9 @@
 tripulacao_terminal = ['Piloto', 'Oficial 1', 'Oficial 2', 'Chefe de Serviço', 'Comissária 1', 'Comissária 2', 'Policial', 'Maykon']
 
 mov_ida = '''MOVIMENTAÇÃO FORTWO
-TERMINAL   ->   AVIÃO'''
+\033[32mTERMINAL   ->   AVIÃO\033[0;0m'''
 mov_volta = '''MOVIMENTAÇÃO FORTWO
-AVIÃO   ->   TERMINAL'''
+\033[32mAVIÃO   ->   TERMINAL\033[0;0m'''
 terminal = 'Tripulantes no Terminal -> '
 aviao = 'Tripulantes no Avião -> '
 trip_aviao = []
