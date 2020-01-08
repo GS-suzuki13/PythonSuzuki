@@ -47,6 +47,8 @@ print('Terminal -> Avião')
 dentro_aviao.append(tripulacao_terminal.pop(1))
 print(f'Dentro Do Avião{dentro_aviao}')
 print(f'Dentro Do Terminal{tripulacao_terminal}')
+print('\n')
+
 
 #------------- VIAGEM 5 ----------------
 print(f'{tripulacao_terminal}')

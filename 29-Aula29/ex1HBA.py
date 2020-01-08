@@ -29,19 +29,6 @@ def texto_tripula():
     arquivo.close()
     return lista
 
-tripulacao_terminal = texto_tripula()
-
-mov_ida = '''MOVIMENTAÇÃO FORTWO
-\033[32mTERMINAL   ->   AVIÃO\033[0;0m'''
-mov_volta = '''MOVIMENTAÇÃO FORTWO
-\033[32mAVIÃO   ->   TERMINAL\033[0;0m'''
-terminal = 'Tripulantes no Terminal -> '
-aviao = 'Tripulantes no Avião -> '
-trip_aviao = []
-bunito = '-'
-viagem = 0
-
-
 def viagem_fortwo():
 
     global viagem
@@ -55,7 +42,7 @@ def viagem_fortwo():
     print(f'{aviao} {trip_aviao}')
     print(f'{mov_volta} -- IN FORTWO:\033[33m {tripulacao_terminal[0]}\033[0;0m')
     print(f'\033[32m{bunito *15} VIAGEM {viagem} {bunito * 15}\033[0;0m\n')
-
+    input('\033[1;34m*ENTER PARA CONTINUAR*\033[0;0m')
 
     if len(tripulacao_terminal) == 3:
         tripulacao_terminal[0], tripulacao_terminal[1] = tripulacao_terminal[1], tripulacao_terminal[0]
@@ -67,17 +54,29 @@ def viagem_fortwo():
         trip_aviao.append(tripulacao_terminal.pop(0))
         print(f'\033[32m{aviao} {trip_aviao}\033[0;0m\n')
 
-    
-
-for i in range(0,7):
-    viagem_fortwo()
-
 def salvar_lista_aviao():
     arq = open('29-Aula29/trip_aviao.txt', 'w')
     dados = '\n'.join(trip_aviao)
     lista_text = [dados]
     arq.writelines(lista_text)
     arq.close()
+
+tripulacao_terminal = texto_tripula()
+
+mov_ida = '''MOVIMENTAÇÃO FORTWO
+\033[32mTERMINAL   ->   AVIÃO\033[0;0m'''
+mov_volta = '''MOVIMENTAÇÃO FORTWO
+\033[32mAVIÃO   ->   TERMINAL\033[0;0m'''
+terminal = 'Tripulantes no Terminal -> '
+aviao = 'Tripulantes no Avião -> '
+trip_aviao = []
+bunito = '-'
+viagem = 0
+
+
+for i in range(0,7):
+    viagem_fortwo()
+
     
 salvar_lista_aviao()
 
