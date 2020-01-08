@@ -50,7 +50,7 @@ def viagem_fortwo():
     print(f'EMBARQUE {viagem} (IN FORTWO)  --\033[31m {tripulacao_terminal[0]} e {tripulacao_terminal[1]}\033[0;0m')
     print(mov_ida)
     print(f'{terminal} {tripulacao_terminal[2:]}')
-    input('|')
+    input('\033[1;34m*ENTER PARA CONTINUAR*\033[0;0m')
     trip_aviao.append(tripulacao_terminal.pop(1))
     print(f'{aviao} {trip_aviao}')
     print(f'{mov_volta} -- IN FORTWO:\033[33m {tripulacao_terminal[0]}\033[0;0m')
