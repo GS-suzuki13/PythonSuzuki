@@ -74,8 +74,13 @@ for i in range(0,7):
 
 def salvar_lista_aviao():
     arq = open('29-Aula29/trip_aviao.txt', 'w')
-    arq.write('')
+    dados = '\n'.join(trip_aviao)
+    lista_text = [dados]
+    arq.writelines(lista_text)
+    arq.close()
     
+salvar_lista_aviao()
+
 
 
 
