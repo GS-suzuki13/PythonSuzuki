@@ -43,18 +43,55 @@ ID | NOME | SOBRENOME | IDADE | ENDEREÇO ID''')
     for p  in  pessoas:
         print(p)
     id_select = int(input('Digite o Número do ID desejado para alterar: '))
-    nome = input('Digite o Nome desejado para alterar: ')
-    sobrenome = input('Digite o Sobrenome desejado para alterar: ')
-    idade = input('Digite a Idade desejada para alterar: ')
-    endereco_id = input('Digite o Número do ID do endereço desejado para alterar: ')
-    if endereco_id == ' ':
-        endereco_id='NULL'
-        cr.execute(f"UPDATE TortugaNinja SET Nome='{nome}', Sobrenome='{sobrenome}', Idade={idade}, Endereco_ID={endereco_id} WHERE ID={id_select} ")
-        cn.commit()
+    desejado = int(input('''
+=========== MENU DE ALTERAÇÃO ===========
+1 - ALTERAR NOME
+2 - ALTERAR SOBRENOME
+3 - ALTERAR IDADE
+4 - ALTERAR ENDEREÇO ID
+5 - ALTERAR TODOS
+=========================================
+Digite a alteração que deseja ser feita (SOMENTE UMA ALTERÇÃO POR VEZ): '''))
+    # nome = input('Digite o Nome desejado para alterar: ')
+    # sobrenome = input('Digite o Sobrenome desejado para alterar: ')
+    # idade = input('Digite a Idade desejada para alterar: ')
+    # endereco_id = input('Digite o Número do ID do endereço desejado para alterar: ')
     
-    else:
-        cr.execute(f"UPDATE TortugaNinja SET Nome='{nome}', Sobrenome='{sobrenome}', Idade={idade}, Endereco_ID={endereco_id} WHERE ID={id_select} ")
+    if desejado == 1:
+        nome = input('Digite o Nome desejado para alterar: ')
+        cr.execute(f"UPDATE TortugaNinja SET Nome='{nome}' WHERE ID={id_select} ")
+        cn.commit()   
+
+    elif desejado == 2:
+        sobrenome = input('Digite o Sobrenome desejado para alterar: ')
+        cr.execute(f"UPDATE TortugaNinja SET Sobrenome='{sobrenome}' WHERE ID={id_select} ")
         cn.commit()
+
+    elif desejado == 3:
+        idade = input('Digite a Idade desejado para alterar: ')
+        cr.execute(f"UPDATE TortugaNinja SET Idade={idade} WHERE ID={id_select} ")
+        cn.commit()  
+
+    elif desejado == 4:
+        endereco_id = input('Digite o Endereço ID desejado para alterar: ')
+        cr.execute(f"UPDATE TortugaNinja SET Endereco_ID={endereco_id} WHERE ID={id_select} ")
+        cn.commit()
+
+    elif desejado == 5:
+        nome = input('Digite o Nome desejado para alterar: ')
+        sobrenome = input('Digite o Sobrenome desejado para alterar: ')
+        idade = input('Digite a Idade desejada para alterar: ')
+        endereco_id = input('Digite o Número do ID do endereço desejado para alterar: ')
+        if endereco_id == ' ':
+            endereco_id='NULL'
+            cr.execute(f"UPDATE TortugaNinja SET Nome='{nome}', Sobrenome='{sobrenome}', Idade={idade}, Endereco_ID={endereco_id} WHERE ID={id_select} ")
+            cn.commit()
+    
+        else:
+            cr.execute(f"UPDATE TortugaNinja SET Nome='{nome}', Sobrenome='{sobrenome}', Idade={idade}, Endereco_ID={endereco_id} WHERE ID={id_select} ")
+            cn.commit()
+    else:
+        print('OPÇÃO DESEJADA INVALIDA, NADA ACONTECE')
     print('\033[32m=-\033[0;0m'*5, 'Item Inserido Com Sucesso', '\033[32m=-\033[0;0m'*5)
     cr.execute('SELECT * FROM TortugaNinja')
     pessoas = cr.fetchall()
@@ -99,7 +136,7 @@ alterar(conexao, cursor)
 
 
 
-
+ 
 
 
 
