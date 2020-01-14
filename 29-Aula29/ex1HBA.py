@@ -11,7 +11,7 @@
 # A empresa não coloca nenhum limite para o número de viagens entre o terminal e o avião.
 # Por motivos de segurança o presidiário não pode ficar sozinho em momento algum com os
 # tripulantes sem a presença do policial, nem no terminal e nem no avião. De forma a facilitar o
-# processo, a empresa autorizou que o policial pudesse dirigir o veículo também.
+# processo, a empresa autorizou que o policial pudesse dirigir o veículo também.'
 
 # Requisitos:
 # 1 - Sempre que o Fortwo se mover, apresentar no console quando ele chega no destino
@@ -29,6 +29,7 @@ def texto_tripula():
     arquivo.close()
     return lista
 
+
 def viagem_fortwo():
 
     global viagem
@@ -42,7 +43,7 @@ def viagem_fortwo():
     print(f'{aviao} {trip_aviao}')
     print(f'{mov_volta} -- IN FORTWO:\033[33m {tripulacao_terminal[0]}\033[0;0m')
     print(f'\033[32m{bunito *15} VIAGEM {viagem} {bunito * 15}\033[0;0m\n')
-    input('\033[1;34m*ENTER PARA CONTINUAR*\033[0;0m')
+
 
     if len(tripulacao_terminal) == 3:
         tripulacao_terminal[0], tripulacao_terminal[1] = tripulacao_terminal[1], tripulacao_terminal[0]
@@ -53,13 +54,15 @@ def viagem_fortwo():
     elif len(tripulacao_terminal) == 1:
         trip_aviao.append(tripulacao_terminal.pop(0))
         print(f'\033[32m{aviao} {trip_aviao}\033[0;0m\n')
+   
 
 def salvar_lista_aviao():
     arq = open('29-Aula29/trip_aviao.txt', 'w')
     dados = '\n'.join(trip_aviao)
-    lista_text = [dados]
-    arq.writelines(lista_text)
+    lista_trip_aviao = [dados]
+    arq.writelines(lista_trip_aviao)
     arq.close()
+    
 
 tripulacao_terminal = texto_tripula()
 
@@ -77,15 +80,7 @@ viagem = 0
 for i in range(0,7):
     viagem_fortwo()
 
-    
 salvar_lista_aviao()
-
-
-
-
-
-
-
 
 
 
