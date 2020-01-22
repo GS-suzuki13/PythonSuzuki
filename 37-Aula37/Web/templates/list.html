@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title_app}} - List</title>
+    <link rel="stylesheet" href="../static/estilo.css">
+</head>
+<body>
+    <div class="content">
+        <a class='btn-register' href="/register">register</a>
+        <table id='table-squad'>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>PeopleNumber</th>
+                    <th>LanguageBackEnd</th>
+                    <th>FrameworkFrontEnd</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for s in lista %}
+                <tr>
+                    <td>{{ s.id }}</td>
+                    <td>{{ s.name }}</td>
+                    <td>{{ s.description }}</td>
+                    <td>{{ s.peoplenumber }}</td>
+                    <td>{{ s.languagebackend }}</td>
+                    <td>{{ s.frameworkfrontend }}</td>                   
+                    <td>
+                        <a href="/register?id={{ p.id }}" class="edit">Edit</a>
+                        <a href="/delete?id={{ s.id }}" class="delet">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>

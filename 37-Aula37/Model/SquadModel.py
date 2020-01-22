@@ -5,7 +5,7 @@ class Squad:
         self.description = ''
         self.peoplenumber = 0
         self.languagebackend = ''
-        self.framewokfrontend = ''
+        self.frameworkfrontend = ''
 
     def __str__(self):
         return f'{self.id}|{self.name}|{self.description}|{self.peoplenumber}|{self.languagebackend}|{self.framewokfrontend}'
