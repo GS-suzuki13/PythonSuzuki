@@ -1,7 +1,7 @@
 import sys
-sys.path.append('c:/Users/Gustavo Suzuki/Desktop/PythonSuzuki/37-Aula37')
-from Dao.squadDao import SquadDao
-from Model.squadModel import Squad
+sys.path.append(r'C:\Users\900142\Desktop\PythonSuzuki\37-Aula37')
+from Dao.SquadDao import SquadDao
+from Model.SquadModel import Squad
 
 class SquadController:
     dao = SquadDao()
@@ -15,7 +15,7 @@ class SquadController:
             squad.name = s[1]
             squad.description = s[2]
             squad.peoplenumber = s[3]
-            squad.languagebackend = s[3]
+            squad.languagebackend = s[4]
             squad.frameworkfrontend = s[5]
             list_squad.append(squad)
         return list_squad
@@ -23,22 +23,14 @@ class SquadController:
     def search_for_id(self, id):
         s = self.dao.search_for_id(id)
         squad = Squad()
-        squad = Squad()
-        squad.id =  s[0]
-        squad.name = s[1]
-        squad.description = s[2]
-        squad.peoplenumber = s[3]
-        squad.languagebackend = s[3]
-        squad.frameworkfrontend = s[5]
+        squad.create(*s)
         return squad
 
     def save(self, squad:Squad):
-        squad.id = self.squad_controller(save)
         return self.dao.save(squad)
 
     def change(self, squad:Squad):
-        self.squad_controller.change(squad)
-        self.dao.change
+        self.dao.change(squad)
 
-    def delete(self, id):
-        self.dao.delete(id)
+    def delete(self, id1):
+        self.dao.delete(id1)

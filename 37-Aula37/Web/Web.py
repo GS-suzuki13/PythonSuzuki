@@ -1,12 +1,13 @@
 from flask import Flask, render_template, request, redirect
 import sys
-sys.path.append('c:/Users/Gustavo Suzuki/Desktop/PythonSuzuki/37-Aula37')
+sys.path.append(r'C:\Users\900142\Desktop\PythonSuzuki\37-Aula37')
+
 from Controller.squadController import SquadController
-from Model.squadModel import Squad
+from Model.SquadModel import Squad
 
 app = Flask(__name__)
 squad_controller = SquadController()
-name = 'SQUADS HBSIS'
+name = 'Squads HBSIS'
 
 @app.route('/')
 def inicio():
@@ -21,26 +22,28 @@ def list():
 def register():
     squad = Squad()
     if 'id' in request.args:
-        id = request.args['id']
-        squad = squad_controller.search_for_id(id)
+        id1 = request.args['id']
+        squad = squad_controller.search_for_id(id1)
     return render_template('register.html', title_app = name, squad = squad)
 
 @app.route('/delete')
 def delete():
-    id = int(request.args['id'])
-    id_end = request.args['id_end']
-    squad_controller.delete(id)
+    id1 = int(request.args['id'])
+    squad_controller.delete(id1)
     return redirect('/list')
 
 @app.route('/save')
 def salvar():
     squad = Squad()
-    squad.id = request.args['id']
-    squad.name = request.args['name']
-    squad.description = request.args['description']
-    squad.peoplenumber = request.args['peoplenumber']
-    squad.languagebackend = request.args['languagebackend']
-    squad.frameworkfrontend = request.args['frameworkfrontend']
+    squad.create(**dict(request.args))
+    # request.args.to_dict()
+
+    # squad.id = request.args['id'] 
+    # squad.name = request.args['name']
+    # squad.description = request.args['description']
+    # squad.peoplenumber = request.args['peoplenumber']
+    # squad.languagebackend = request.args['languagebackend']
+    # squad.frameworkfrontend = request.args['frameworkfrontend']
 
     if squad.id == 0:
         squad_controller.save(squad)

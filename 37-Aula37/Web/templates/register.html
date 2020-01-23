@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{title_app}} - Register</title>
-    <link rel="stylesheet" href="../static/estilo.css">
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
     <div class="content">
@@ -20,11 +20,11 @@
             </div>
             <input type="text" name="description" id="description" value="{{squad.description}}"> <br/>
             <div class="description"> 
-                <label for="peoplenumber">Peoplenumber:</label>
+                <label for="peoplenumber">PeopleNumber:</label>
             </div>
             <input type="text" name="peoplenumber" id="peoplenumber" value="{{squad.peoplenumber if squad.peoplenumber != 0 else ''}}"> <br/>
             <div class="description"> 
-                <label for="languagebackend">LanguagebackEnd:</label>
+                <label for="languagebackend">LanguageBackEnd:</label>
             </div>
             <input type="text" name="languagebackend" id="languagebackend" value="{{squad.languagebackend}}"> <br/>
             <div class="description"> 
@@ -35,6 +35,9 @@
             <hr/>
             <input type="submit" value="Save" class="save">
             <a href="/register" class="Clear">Clear</a>
+            <footer class="pricing-footerthree">
+                <a class='selectthree' href="/">Back Menu</a>
+            </footer>    
         </form>
     </div>
 </body>

@@ -1,26 +1,26 @@
 import MySQLdb
 import sys
-sys.path.append('c:/Users/Gustavo Suzuki/Desktop/PythonSuzuki/37-Aula37')
-from Model.squadModel import Squad
+sys.path.append('C:/Users/900142/Desktop/PythonSuzuki/37-Aula37')
+from Model.SquadModel import Squad
 
 class SquadDao:
-    connection = MySQLdb.connect(host='mysql.topskills.study', database='topskills01', user='topskills01', passwd='ts2019')
+    connection = MySQLdb.connect(host='mysql.padawans.dev', database='padawans12', user='padawans12', passwd='mg2019')
     cursor = connection.cursor()
    
     def list_all(self):
-        command = f'SELECT * FROM SuzukiSquad'
+        command = f'SELECT * FROM padawans12.SuzukiSquad'
         self.cursor.execute(command)
         result = self.cursor.fetchall()
         return result
     
     def search_for_id(self, id):
-        command = f'SELECT * FROM SuzukiSquad AS S WHERE S.ID = {id}'
+        command = f'SELECT * FROM padawans12.SuzukiSquad AS S WHERE S.ID = {id}'
         self.cursor.execute(command)
         result = self.cursor.fetchone()
         return result
 
     def save(self, squad:Squad):
-        command = f""" INSERT INTO SuzukiSquad
+        command = f""" INSERT INTO padawans12.SuzukiSquad
         (
             Name,
             Description,
@@ -43,12 +43,12 @@ class SquadDao:
         return id_inserted
 
     def change(self, squad:Squad):
-        command = f""" UPDATE SuzukiSquad
+        command = f""" UPDATE padawans12.SuzukiSquad
         SET
             Name = '{squad.name}'
             Description = '{squad.description}'
-            PeopleNumber = {squad.peopleNumber}
-            LanguageBackEnd = '{squad.languageBackEnd}'
+            PeopleNumber = {squad.peoplenumber}
+            LanguageBackEnd = '{squad.languagebackend}'
             FrameworkFrontEnd = '{squad.frameworkfrontend}'
         WHERE ID = {squad.id}
         """
