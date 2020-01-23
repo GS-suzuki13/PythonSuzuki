@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/Users/900170/Desktop/PythonSuzuki/37-Aula37')
+sys.path.append('c:/Users/Gustavo Suzuki/Desktop/PythonSuzuki/37-Aula37')
 from Dao.squadDao import SquadDao
 from Model.squadModel import Squad
 

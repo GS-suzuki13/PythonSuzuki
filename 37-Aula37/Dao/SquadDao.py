@@ -1,6 +1,6 @@
 import MySQLdb
 import sys
-sys.path.append('/Users/900170/Desktop/PythonSuzuki/37-Aula37')
+sys.path.append('c:/Users/Gustavo Suzuki/Desktop/PythonSuzuki/37-Aula37')
 from Model.squadModel import Squad
 
 class SquadDao:
@@ -8,19 +8,19 @@ class SquadDao:
     cursor = connection.cursor()
    
     def list_all(self):
-        command = f'SELECT * SuzukiSquad'
+        command = f'SELECT * FROM SuzukiSquad'
         self.cursor.execute(command)
         result = self.cursor.fetchall()
         return result
     
     def search_for_id(self, id):
-        command = f'SELECT * FROM SquadSuzuki AS S WHERE S.ID = {id}'
+        command = f'SELECT * FROM SuzukiSquad AS S WHERE S.ID = {id}'
         self.cursor.execute(command)
         result = self.cursor.fetchone()
         return result
 
     def save(self, squad:Squad):
-        command = f""" INSERT INTO SquadSuzuki
+        command = f""" INSERT INTO SuzukiSquad
         (
             Name,
             Description,
@@ -34,7 +34,7 @@ class SquadDao:
             '{squad.description}',
             {squad.peopleNumber},
             '{squad.languageBackEnd}',
-            '{squad.frameworkfrontend}
+            '{squad.frameworkfrontend}',
 
         )"""
         self.cursor.execute(command)
@@ -43,7 +43,7 @@ class SquadDao:
         return id_inserted
 
     def change(self, squad:Squad):
-        command = f""" UPDATE SquadSuzuki
+        command = f""" UPDATE SuzukiSquad
         SET
             Name = '{squad.name}'
             Description = '{squad.description}'

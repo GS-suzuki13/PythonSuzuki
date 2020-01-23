@@ -2,7 +2,7 @@ body{
     background: #ccc;
     color:#fff;
 }
-#tabela-pessoa{
+#table-people{
     width: 95%;
     margin: 3em auto 2em;
     border-collapse: collapse;
@@ -10,65 +10,65 @@ body{
     background: #fff;
     border-radius: 1em;
 }
-#tabela-pessoa thead tr th{
+#table-people thead tr th{
     background: #000;
     padding: 0.8em;
     text-align: left;
     
 }
-#tabela-pessoa tbody tr td{
+#table-people tbody tr td{
     padding: 0.3em;
     color:#000;
 }
-.btn-cadastro{
+.btn-register{
     color:#fff;
     background: #185201;
     margin: 2.2 em ;
     padding: 10px;
     text-decoration: none;
 }
-.btn-cadastro:hover{
+.btn-register:hover{
     color:#185201;
     background: #fff;
     border: 1px solid #185201;
 }
-.conteudo{
+.content{
     width: 80%;
     margin:80px auto;
 }
 
 
-/* Formularios */
+/* Forms */
 form{
     width: 60%;
     margin: 2em auto ;
     padding: 3em 4em 2em;
     border: 1px solid #777777a2;
 }
-.editar{
+.edit{
     color:#fff;
     padding: 0.2em;
     text-decoration: none;
     background:#f8d700;
 }
-.editar:hover{
+.edit:hover{
     color:#f8d700;
     background:#fff;
     border:1px solid #f8d700;
 }
-.excluir{
+.delete{
     padding: 0.2em;
     text-decoration: none;
     color:#fff;
     background:#f00;
 }
-.excluir:hover{
+.delete:hover{
     color:#f00;
     background:#fff;
     border: 1px solid #f00;
 }
 
-.salvar{
+.save{
     background:  #185201;
     color: #fff;
     padding: 1em;
@@ -76,13 +76,13 @@ form{
     cursor: pointer;
     width: 10em;
 }
-.salvar:hover
+.save:hover
 {
     color:#185201;
     background: #fff;
     border: 1px solid #185201;
 }
-.limpar{
+.clear{
     padding: 0.6em 1em;
     background: #f8d700;
     color: #fff;
@@ -90,7 +90,7 @@ form{
     cursor: pointer;
     width: 12em;
 }
-.limpar:hover
+.clear:hover
 {
     color:#f8d700;
     background: #fff;
@@ -102,12 +102,12 @@ input[type='text']{
     margin-bottom: 1em;
     border-radius: 8px;
 }
-.descricoes{
+.description{
     width: 20%;
     text-align: right;
     margin-right: 10px;
     text-transform: uppercase;
 }
-input[type='text'] , .descricoes{
+input[type='text'] , .description{
     display: inline-block;
 }
