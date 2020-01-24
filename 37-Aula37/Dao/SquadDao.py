@@ -1,6 +1,6 @@
 import MySQLdb
 import sys
-sys.path.append('C:/Users/900142/Desktop/PythonSuzuki/37-Aula37')
+sys.path.append(r'C:\Users\Gustavo Suzuki\Desktop\PythonSuzuki\37-Aula37')
 from Model.SquadModel import Squad
 
 class SquadDao:
@@ -20,21 +20,21 @@ class SquadDao:
         return result
 
     def save(self, squad:Squad):
-        command = f""" INSERT INTO padawans12.SuzukiSquad
+        command = f""" INSERT INTO padawans12.SuzukiSquad ss
         (
             Name,
             Description,
             PeopleNumber,
             LanguageBackEnd,
-            FrameworkFrontEnd,
+            FrameworkFrontEnd
         )
         VALUES
         (
             '{squad.name}',
             '{squad.description}',
-            {squad.peopleNumber},
-            '{squad.languageBackEnd}',
-            '{squad.frameworkfrontend}',
+            {squad.peoplenumber},
+            '{squad.languagebackend}',
+            '{squad.frameworkfrontend}'
 
         )"""
         self.cursor.execute(command)
@@ -43,14 +43,19 @@ class SquadDao:
         return id_inserted
 
     def change(self, squad:Squad):
-        command = f""" UPDATE padawans12.SuzukiSquad
+        command = f"""UPDATE padawans12.SuzukiSquad
         SET
-            Name = '{squad.name}'
-            Description = '{squad.description}'
-            PeopleNumber = {squad.peoplenumber}
-            LanguageBackEnd = '{squad.languagebackend}'
+            Name = '{squad.name}',
+            Description = '{squad.description}',
+            PeopleNumber = {squad.peoplenumber},
+            LanguageBackEnd = '{squad.languagebackend}',
             FrameworkFrontEnd = '{squad.frameworkfrontend}'
         WHERE ID = {squad.id}
         """
         self.cursor.execute(command)
-        self.cursor.commit()
+        self.connection.commit()
+
+    def delete(self, id1):
+        command = f"DELETE FROM padawans12.SuzukiSquad WHERE ID = {id1}"
+        self.cursor.execute(command)
+        self.connection.commit()

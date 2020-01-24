@@ -1,8 +1,7 @@
 from flask import Flask, render_template, request, redirect
 import sys
-sys.path.append(r'C:\Users\900142\Desktop\PythonSuzuki\37-Aula37')
-
-from Controller.squadController import SquadController
+sys.path.append(r'C:\Users\Gustavo Suzuki\Desktop\PythonSuzuki\37-Aula37')
+from Controller.SquadController import SquadController
 from Model.SquadModel import Squad
 
 app = Flask(__name__)
@@ -33,19 +32,18 @@ def delete():
     return redirect('/list')
 
 @app.route('/save')
-def salvar():
+def save():
     squad = Squad()
-    squad.create(**dict(request.args))
+    # squad.create(**dict(request.args))
     # request.args.to_dict()
+    squad.id = request.args['id'] 
+    squad.name = request.args['name']
+    squad.description = request.args['description']
+    squad.peoplenumber = request.args['peoplenumber']
+    squad.languagebackend = request.args['languagebackend']
+    squad.frameworkfrontend = request.args['frameworkfrontend']
 
-    # squad.id = request.args['id'] 
-    # squad.name = request.args['name']
-    # squad.description = request.args['description']
-    # squad.peoplenumber = request.args['peoplenumber']
-    # squad.languagebackend = request.args['languagebackend']
-    # squad.frameworkfrontend = request.args['frameworkfrontend']
-
-    if squad.id == 0:
+    if squad.id == '0':
         squad_controller.save(squad)
     else:
         squad_controller.change(squad)
