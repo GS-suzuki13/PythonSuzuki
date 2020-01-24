@@ -20,7 +20,7 @@ class SquadDao:
         return result
 
     def save(self, squad:Squad):
-        command = f""" INSERT INTO padawans12.SuzukiSquad
+        command = f""" INSERT INTO padawans12.SuzukiSquad ss
         (
             Name,
             Description,
@@ -35,6 +35,7 @@ class SquadDao:
             {squad.peoplenumber},
             '{squad.languagebackend}',
             '{squad.frameworkfrontend}'
+
         )"""
         self.cursor.execute(command)
         self.connection.commit()

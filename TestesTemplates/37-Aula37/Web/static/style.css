@@ -1,0 +1,936 @@
+/* body{
+    background: #ccc;
+    color:#fff;
+}
+#table-people{
+    width: 85%%;
+    margin: 5em auto 4em;
+    border-collapse: collapse;
+    border-radius: 3em;
+    background: #fff;
+    border-radius: 3em;
+}
+#table-people thead tr th{
+    background: #000;
+    padding: 0.10em;
+    text-align: left;
+    
+}
+#table-people tbody tr td{
+    padding: 0.5em;
+    color:#000;
+}
+.btn-register{
+    color:#fff;
+    background: #185201;
+    margin: 2.2 em ;
+    padding: 10px;
+    text-decoration: none;
+}
+.btn-register:hover{
+    color:#185201;
+    background: #fff;
+    border: 1px solid #185201;
+}
+.content{
+    width: 80%;
+    margin:90px auto;
+}
+
+
+/* Forms */
+/* form{
+    width: 60%;
+    margin: 2em auto ;
+    padding: 3em 4em 2em;
+    border: 1px solid #777777a2;
+}
+.edit{
+    color:#fff;
+    padding: 0.2em;
+    text-decoration: none;
+    background:#f8d700;
+}
+.edit:hover{
+    color:#f8d700;
+    background:#fff;
+    border:1px solid #f8d700;
+}
+.delete{
+    padding: 0.2em;
+    text-decoration: none;
+    color:#fff;
+    background:#f00;
+}
+.delete:hover{
+    color:#f00;
+    background:#fff;
+    border: 1px solid #f00;
+}
+
+.save{
+    background:  #185201;
+    color: #fff;
+    padding: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 10em;
+}
+.save:hover
+{
+    color:#185201;
+    background: #fff;
+    border: 1px solid #185201;
+}
+.clear{
+    padding: 0.6em 1em;
+    background: #f8d700;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 12em;
+}
+.clear:hover
+{
+    color:#f8d700;
+    background: #fff;
+    border: 1px solid #f8d700;
+}
+input[type='text']{
+    padding: 1em 1.5em;
+    width: 60%;
+    margin-bottom: 1em;
+    border-radius: 8px;
+}
+.description{
+    width: 20%;
+    text-align: right;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+input[type='text'] , .description{
+    display: inline-block;
+} */ 
+/* Colors */
+/* $white: #FFFFEA;
+$red: #FF5E5B;
+$blue: #00CECB;
+$yellow: #FFED66;
+
+/* Fonts */
+/*   $abel: 'Abel', sans-serif;
+    $lobster: 'Lobster', cursive;
+
+
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        background: linear-gradient(45deg, #49a09d, #5f2c82);
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    table {
+        width: 800px;
+        border-collapse: collapse;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    th,
+    td {
+        padding: 15px;
+        background-color: rgba(255,255,255,0.2);
+        color: #fff;
+    }
+
+    th {
+        text-align: left;
+    }
+
+    thead {
+        th {
+            background-color: #55608f;
+        }
+    }
+
+    tbody {
+        tr {
+            &:hover {
+                background-color: rgba(255,255,255,0.3);
+            }
+        }
+        td {
+            position: relative;
+            &:hover {
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: -9999px;
+                    bottom: -9999px;
+                    background-color: rgba(255,255,255,0.2);
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    .pricing-footer {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        height: 40px;
+        width: 50%;
+    }
+
+    .pricing-footer {
+        position: relative;
+        height: auto;
+        padding: 0.3em 0;
+        text-align: center;
+    }
+
+    .pricing-footer::after {
+        display: none;
+    }
+
+    .has-margins .pricing-footer {
+        padding-bottom: 0;
+    }
+
+    .select {
+        position: relative;
+        z-index: 1;
+        display: block;
+        height: 70%;
+        overflow: hidden;
+        text-indent: 70%;
+        white-space: nowrap;
+        color: transparent;
+    }
+
+    .select {
+        position: static;
+        display: inline-block;
+        height: auto;
+        padding: 0.8em 2em;
+        color: #1bbc9d;
+        border-radius: 8px;
+        border: 2px solid #1bbc9d;
+        text-decoration: none;
+        font-size: 0.8rem;
+        text-indent: 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: all .6s;
+        width: 80%;
+    }
+
+    .no-touch .select:hover {
+        background-color: #1bbc9d;
+        color: #ffffff;
+    }
+
+    .exclusive .select {
+        background-color: #1bbc9d;
+        color: #ffffff;
+    }
+    
+    .no-touch .exclusive .select:hover {
+        background-color: #24e0ba;
+    }
+    
+    .secondary-theme .exclusive .select {
+        background-color: #1bbc9d;
+    }
+    
+    .no-touch .secondary-theme .exclusive .select:hover {
+        background-color: #112e3c;
+    }
+    
+    .has-margins .select {
+        display: block;
+        padding: 0.2em 0;
+        border-radius: 0 0 2px 2px;
+    }
+
+    .pricing-footertwo {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        height: 40px;
+        width: 50%;
+    }
+
+    .pricing-footertwo {
+        position: relative;
+        height: auto;
+        padding: 0.3em 0;
+        text-align: left;
+    }
+
+    .pricing-footertwo::after {
+        display: none;
+    }
+
+    .has-margins .pricing-footertwo {
+        padding-bottom: 0;
+    }
+
+    .selecttwo {
+        position: relative;
+        z-index: 1;
+        display: block;
+        height: 30%;
+        overflow: hidden;
+        text-indent: 30%;
+        white-space: nowrap;
+        color: transparent;
+        text-align: center;
+    }
+
+    .selecttwo {
+        position: static;
+        display: inline-block;
+        height: auto;
+        padding: 0.4em 0.6em;
+        color: #1bbc9d;
+        border-radius: 8px;
+        border: 2px solid #1bbc9d;
+        font-size: 0.6rem;
+        text-decoration: none;
+        text-indent: 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: all .6s;
+        width: 40%;
+    }
+
+    .no-touch .selecttwo:hover {
+        background-color: #1bbc9d;
+        color: #ffffff;
+    }
+
+    .exclusive .selecttwo {
+        background-color: #1bbc9d;
+        color: #ffffff;
+    }
+    
+    .no-touch .exclusive .selecttwo:hover {
+        background-color: #24e0ba;
+    }
+    
+    .secondary-theme .exclusive .selecttwo {
+        background-color: #1bbc9d;
+    }
+    
+    .no-touch .secondary-theme .exclusive .selecttwo:hover {
+        background-color: #112e3c;
+    }
+    
+    .has-margins .selecttwo {
+        display: block;
+        padding: 0.5em 0;
+        border-radius: 0 0 2px 2px;
+    }
+
+    .pricing-footerthree {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        height: 40px;
+        width: 50%;
+    }
+
+    .pricing-footerthree {
+        position: relative;
+        height: auto;
+        padding: 0.3em 0;
+        text-align: left;
+    }
+
+    .pricing-footerthree::after {
+        display: none;
+    }
+
+    .has-margins .pricing-footerthree {
+        padding-bottom: 0;
+    }
+
+    .selectthree {
+        position: relative;
+        z-index: 1;
+        display: block;
+        height: 30%;
+        overflow: hidden;
+        text-indent: 30%;
+        white-space: nowrap;
+        color: transparent;
+        text-align: center;
+    }
+
+    .selectthree {
+        position: static;
+        display: inline-block;
+        height: auto;
+        padding: 0.4em 0.6em;
+        color: #1bbc9d;
+        border-radius: 8px;
+        border: 2px solid #1bbc9d;
+        font-size: 0.6rem;
+        text-decoration: none;
+        text-indent: 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: all .6s;
+        width: 40%;
+    }
+
+    .no-touch .selectthree:hover {
+        background-color: #1bbc9d;
+        color: #ffffff;
+    }
+
+    .exclusive .selectthree {
+        background-color: #1bbc9d;
+        color: #ffffff;
+    }
+    
+    .no-touch .exclusive .selectthree:hover {
+        background-color: #24e0ba;
+    }
+    
+    .secondary-theme .exclusive .selectthree {
+        background-color: #1bbc9d;
+    }
+    
+    .no-touch .secondary-theme .exclusive .selectthree:hover {
+        background-color: #112e3c;
+    }
+    
+    .has-margins .selectthree {
+        display: block;
+        padding: 0.5em 0;
+        border-radius: 0 0 2px 2px;
+    }
+
+    .heading {
+        font-size: 30px;
+        font-family: $lobster;
+        color: $red;
+        margin-bottom: 0;
+    }
+
+    p.desc {
+    letter-spacing: 0.5px;
+    margin-top: 0;
+    margin-bottom: 60px;
+    /* } */
+/* Colors */
+$white: #FFFFEA;
+$red: #FF5E5B;
+$blue: #00CECB;
+$yellow: #FFED66;
+
+/* Fonts */
+$abel: 'Abel', sans-serif;
+$lobster: 'Lobster', cursive;
+
+/* Background images */
+$bgPattern: "C:/Users/900142/Desktop/SuzuBOT/inspiration-geometry.png";
+
+
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+/* General */
+
+body {
+    background-color: $white;
+    background-image: url($bgPattern);
+    font-family: $abel;
+    color: $red;
+}
+
+
+
+/* Main page */
+
+.heading {
+    font-size: 30px;
+    font-family: $lobster;
+    color: $red;
+    margin-bottom: 0;
+}
+
+p.desc {
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+
+/* Timer */
+
+.timer {
+    display: none;
+    position: fixed;
+    pointer-events: none;
+    left: 30px;
+    top: 30px;
+  
+    label#minutes,
+    label#seconds {
+        display: inline-block;
+        font-size: 20px;
+    }
+  
+    .time {
+        display: none;
+        font-size: 13px;
+    }
+}
+
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    background-color: $yellow;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+
+    font-family: $abel;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $red;
+
+    box-shadow: 0 3px 0 $red;
+    cursor: pointer;
+    transition: all 100ms linear;
+    
+    &:hover {
+        @include transform(translateY(-4px));
+        box-shadow: 0 7px 0 $red;
+    }
+
+    &:focus { outline: 0; }
+}
+
+
+/* Github ribbon */ 
+#github {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+}
+
+/* Helpers */
+
+.align-center {
+    text-align: center;
+}
+
+.hide {
+    display: none !important;
+}
+
+.cursor-default {
+    cursor: default !important;
+}
+
+
+
+/* Reponsive Rules */
+
+@media screen and (max-width: 1200px) {
+    .flip-container, .front, .back {
+        width: 140px;
+        height: 180px;
+    }
+
+    .timer {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: $white;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .flip-container, .front, .back {
+        width: 100px;
+        height: 140px;
+    }
+
+    .front label {
+        display: inline-block;
+        font-size: 16px;
+        padding-top: 10px;
+    }
+
+    .cards-container {
+        margin: 40px 10px;
+    }
+
+    .timer {
+        top: 10px;
+        left: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .flip-container, .front, .back {
+        width: 80px;
+        height: 120px;
+    }
+}
+
+
+
+/* Animations */
+
+@keyframes wobble {
+    from { transform: none; }
+    15% { transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -5deg); }
+    30% { transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 3deg); }
+    45% { transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -3deg); }
+    60% { transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 2deg); }
+    75% { transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -1deg); }
+    to { transform: none; }
+}
+
+.wobble {
+    animation: wobble 600ms ease-in-out;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+table {
+    width: 800px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+    padding: 15px;
+    background-color: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+th {
+    text-align: left;
+}
+
+thead {
+    th {
+        background-color: #55608f;
+    }
+}
+
+tbody {
+    tr {
+        &:hover {
+            background-color: rgba(255,255,255,0.3);
+        }
+    }
+    td {
+        position: relative;
+        &:hover {
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -9999px;
+                bottom: -9999px;
+                background-color: rgba(255,255,255,0.2);
+                z-index: -1;
+            }
+        }
+    }
+}
+
+.pricing-footer {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 50%;
+}
+
+.pricing-footer {
+    position: relative;
+    height: auto;
+    padding: 0.3em 0;
+    text-align: center;
+}
+
+.pricing-footer::after {
+    display: none;
+}
+
+.has-margins .pricing-footer {
+    padding-bottom: 0;
+}
+
+.select {
+    position: relative;
+    z-index: 1;
+    display: block;
+    height: 70%;
+    overflow: hidden;
+    text-indent: 70%;
+    white-space: nowrap;
+    color: transparent;
+}
+
+.select {
+    position: static;
+    display: inline-block;
+    height: auto;
+    padding: 0.8em 2em;
+    color: #1bbc9d;
+    border-radius: 8px;
+    border: 2px solid #1bbc9d;
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-indent: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all .6s;
+    width: 80%;
+}
+
+.no-touch .select:hover {
+    background-color: #1bbc9d;
+    color: #ffffff;
+}
+
+.exclusive .select {
+    background-color: #1bbc9d;
+    color: #ffffff;
+}
+
+.no-touch .exclusive .select:hover {
+    background-color: #24e0ba;
+}
+
+.secondary-theme .exclusive .select {
+    background-color: #1bbc9d;
+}
+
+.no-touch .secondary-theme .exclusive .select:hover {
+    background-color: #112e3c;
+}
+
+.has-margins .select {
+    display: block;
+    padding: 0.2em 0;
+    border-radius: 0 0 2px 2px;
+}
+
+.pricing-footertwo {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 50%;
+}
+
+.pricing-footertwo {
+    position: relative;
+    height: auto;
+    padding: 0.3em 0;
+    text-align: left;
+}
+
+.pricing-footertwo::after {
+    display: none;
+}
+
+.has-margins .pricing-footertwo {
+    padding-bottom: 0;
+}
+
+.selecttwo {
+    position: relative;
+    z-index: 1;
+    display: block;
+    height: 30%;
+    overflow: hidden;
+    text-indent: 30%;
+    white-space: nowrap;
+    color: transparent;
+    text-align: center;
+}
+
+.selecttwo {
+    position: static;
+    display: inline-block;
+    height: auto;
+    padding: 0.4em 0.6em;
+    color: #1bbc9d;
+    border-radius: 8px;
+    border: 2px solid #1bbc9d;
+    font-size: 0.6rem;
+    text-decoration: none;
+    text-indent: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all .6s;
+    width: 40%;
+}
+
+.no-touch .selecttwo:hover {
+    background-color: #1bbc9d;
+    color: #ffffff;
+}
+
+.exclusive .selecttwo {
+    background-color: #1bbc9d;
+    color: #ffffff;
+}
+
+.no-touch .exclusive .selecttwo:hover {
+    background-color: #24e0ba;
+}
+
+.secondary-theme .exclusive .selecttwo {
+    background-color: #1bbc9d;
+}
+
+.no-touch .secondary-theme .exclusive .selecttwo:hover {
+    background-color: #112e3c;
+}
+
+.has-margins .selecttwo {
+    display: block;
+    padding: 0.5em 0;
+    border-radius: 0 0 2px 2px;
+}
+
+.pricing-footerthree {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 50%;
+}
+
+.pricing-footerthree {
+    position: relative;
+    height: auto;
+    padding: 0.3em 0;
+    text-align: left;
+}
+
+.pricing-footerthree::after {
+    display: none;
+}
+
+.has-margins .pricing-footerthree {
+    padding-bottom: 0;
+}
+
+.selectthree {
+    position: relative;
+    z-index: 1;
+    display: block;
+    height: 30%;
+    overflow: hidden;
+    text-indent: 30%;
+    white-space: nowrap;
+    color: transparent;
+    text-align: center;
+}
+
+.selectthree {
+    position: static;
+    display: inline-block;
+    height: auto;
+    padding: 0.4em 0.6em;
+    color: #1bbc9d;
+    border-radius: 8px;
+    border: 2px solid #1bbc9d;
+    font-size: 0.6rem;
+    text-decoration: none;
+    text-indent: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all .6s;
+    width: 40%;
+}
+
+.no-touch .selectthree:hover {
+    background-color: #1bbc9d;
+    color: #ffffff;
+}
+
+.exclusive .selectthree {
+    background-color: #1bbc9d;
+    color: #ffffff;
+}
+
+.no-touch .exclusive .selectthree:hover {
+    background-color: #24e0ba;
+}
+
+.secondary-theme .exclusive .selectthree {
+    background-color: #1bbc9d;
+}
+
+.no-touch .secondary-theme .exclusive .selectthree:hover {
+    background-color: #112e3c;
+}
+
+.has-margins .selectthree {
+    display: block;
+    padding: 0.5em 0;
+    border-radius: 0 0 2px 2px;
+}

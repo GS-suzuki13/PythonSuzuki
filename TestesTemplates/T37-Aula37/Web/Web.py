@@ -49,4 +49,8 @@ def save():
         squad_controller.change(squad)
     return redirect('/list')
 
+@app.route('/cadastro_m')
+def cadastro_m():
+    return render_template('cadastro.html')
+    
 app.run(debug=True)
