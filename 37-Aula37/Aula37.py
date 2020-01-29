@@ -7,6 +7,4 @@
 # 6-Criar View tipo Web para realizar as 4 operacoes de CRUD de Squads
 # Squad: ID, Nome, Descricao, NumeroPessoas, LinguagemBackEnd, FrameworkFrontEnd 
 
-
-
-
+# Instalando tudo no pc
