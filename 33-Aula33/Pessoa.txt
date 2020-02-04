@@ -1,9 +1,0 @@
-1|Gustavo Galhardo|Suzuki|18|1
-9|Abreu|KingOfMarinha|16|None
-10|Abreu|Ninja|21|None
-11|Gustavo|Galhardo|18|None
-12|Maykon|Gatão|35|None
-13|Maykon|Gatão|35|None
-14|Jonas|Gatão|35|None
-15|Junin|Gatão|23|None
-16|Nicolas|Galvão|3|None
