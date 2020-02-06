@@ -2,9 +2,11 @@ import MySQLdb
 
 from PythonSuzuki.Aula51.Model.SuzukiModel import SmartphoneModel
 
+
 class SmartphoneDao:
-    connection = MySQLdb.connect(host='mysql.padawans.dev', database='padawans12', user='padawans12', passwd='mg2019')
-    cursor = connection.cursor()
+    def __init__(self):
+        self.connection = MySQLdb.connect(host='mysql.padawans.dev', database='padawans12', user='padawans12', passwd='mg2019')
+        self.cursor = self.connection.cursor()
 
     def list_all(self):
         self.cursor.execute(f"SELECT * FROM padawans12.Suzuki")
@@ -44,7 +46,7 @@ class SmartphoneDao:
                                 SET
                                     Name = '{smartphone.name}',
                                     Model ='{smartphone.model}',
-                                    Date = '{smartphone.date}',
+                                    Date = '{smartphone.date}'
                                 WHERE ID = {smartphone.id}
                                 """)
         self.connection.commit()

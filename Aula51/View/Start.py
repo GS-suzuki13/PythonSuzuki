@@ -9,4 +9,4 @@ api = Api(app)
 api.add_resource(SuzukiController, '/api/smartphone', endpoint='smartphones')
 api.add_resource(SuzukiController, '/api/smartphone/<int:id>', endpoint='smartphone')
 
-app.run(debug=True)
+app.run(debug=True )

@@ -7,7 +7,7 @@ from PythonSuzuki.Aula51.Model.SuzukiModel import SmartphoneModel
 
 class SuzukiController(Resource):
     def __init__(self):
-        self.dao = SmartphoneDao
+        self.dao = SmartphoneDao()
 
     def get(self,id=None):
         if id:
