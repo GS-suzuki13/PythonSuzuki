@@ -11,6 +11,7 @@ def solution(N):
                 count = 1
         if count > max:
             max = count
+        last = i
     print(number)
     return max
-print(solution(50))
+print(solution(32))
