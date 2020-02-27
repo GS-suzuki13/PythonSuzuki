@@ -16,3 +16,4 @@
 # n2 = int(input('Digite a segunda nota: '))
 # n3 = int(input('Digite a terceira nota: '))
 # n4 = int(input('Digite a quarta nota: '))
+
