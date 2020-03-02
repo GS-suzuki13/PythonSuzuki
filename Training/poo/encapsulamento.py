@@ -10,9 +10,11 @@
 class Pessoa():
 
     def __init__(self, nome, comendo=False):
-        self._nome = nome
-        self._comendo = comendo
+        # A adiçãos do _ antes da variável mostra que ela não deve ser alterada por fora
+        # Fazendo com que ela fique "Encapsulada"
+        self.__nome = nome
+        self.__comendo = comendo
 
     def comer(self, alimento):
-        print(f"{self._nome} comeu {alimento}!")
-        self._comendo = True
+        print(f"{self.__nome} comeu {alimento}!")
+        self.__comendo = True
