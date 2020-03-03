@@ -6,6 +6,7 @@
 # os objetos podem responder alterando o seu estado interno
 # utilizando funções-membro especiais como get e set.
 # Eles protegem o código e isso permite que o objeto
+# controle seu próprio estado e suas caracteristicas.
 
 class Pessoa():
 
