@@ -30,14 +30,18 @@ e = Endereco()
 p = Pessoa()
 print(""""\n
 ==== PESSOA ====""")
+
 p.set_nome("Gustavo")
 p.set_sobrenome("Suzuki")
 p.set_idade(18)
 print(f"Nome: {p.get_nome()}")
 print(f"Sobrenome: {p.get_sobrenome()}")
 print(f"Idade: {p.get_idade()}")
-print(""""\n
+
+print("""\n
 ==== ENDEREÇO ====""")
+
+
 e.set_logradouro("23 de Outubro")
 e.set_numero("158")
 e.set_bairro("Itoupava Norte")
