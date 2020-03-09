@@ -1,10 +1,6 @@
 # A herança serve para reutilização
 # de códigos e funcionalidades
-#
-
-
-
-from poo.classes import Pessoa
+from classes import Pessoa
 
 
 class Cliente(Pessoa):

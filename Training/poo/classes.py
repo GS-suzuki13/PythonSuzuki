@@ -1,10 +1,7 @@
 # A classe é um molde para o objeto, sendo uma definição de tipo,
-# é uma estrutura onde podemos definir atributos e comportamentos,
-# é tambem um "TAMPLATE" para a criação de objetos e os seus construtores
-# são implementados para definir um estado inicial de um objeto.
+# é a estrutura onde definimos atributos e comportamentos
 
-# TAMPLATE -> Molde da classe
-
+# Criação de uma classe
 class Pessoa:
     def __init__(self, nome, comendo=False):
         self.nome = nome

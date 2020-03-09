@@ -1,13 +1,7 @@
-# O comportamento de um objeto permanece oculto para o mundo externo,
-# ou os objetos mantêm suas informações de estado como privadas.
-# Os clientes não podem alterar o estado interno dos objetos atuando diretamente neles;
-# em vez disso, eles requisitam o objeto enviando mensagens.
-# Com base no tipo das requisições,
-# os objetos podem responder alterando o seu estado interno
-# utilizando funções-membro especiais como get e set.
-# Eles protegem o código e isso permite que o objeto
-# controle seu próprio estado e suas caracteristicas.
-
+# Torna a variavel privada e inacessível externamente
+# Protegendo assim seu código e possibilitando que
+# o objeto controle seu comportamento e estado de
+# acordo com o que se é requisitdado
 class Pessoa():
 
     def __init__(self, nome, comendo=False):
@@ -15,6 +9,12 @@ class Pessoa():
         # Fazendo com que ela fique "Encapsulada"
         self.__nome = nome
         self.__comendo = comendo
+
+    def get_nome(self)->str:
+        return self.__nome
+
+    def set_logradouro(self, nome)->None:
+        self.__nome = nome
 
     def comer(self, alimento):
         print(f"{self.__nome} comeu {alimento}!")

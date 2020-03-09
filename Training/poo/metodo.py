@@ -1,14 +1,7 @@
 # Definem o comportamento do objeto,
-# podendo passar parâmetros a serem definidos
-# e outros já pré-definidos
-# opera sobre atributos e podem realizar
-# "TROCA DE MENSAGENS" entre os objetos.
-# E nada mais são que funções ou procedimentos
-# dentro das classes
-
-# TROCA DE MENSAGENS -> São as chamadas dos métodos
-
 # Classe Contendo 3 métodos diferentes
+# Métodos realizam troca de mensagens entre objeto
+# essa troca de mensagens são feitas chamando os métodos
 class Pessoa():
     # MÉTODO CONTRUTOR
     def __init__(self, nome, comendo=False):
@@ -22,5 +15,5 @@ class Pessoa():
 
     # MÉTODO DA CLASSE COM PARÂMETRO
     def comer_alimento(self, alimento):
-        print(f"{self.nome} irá comer {alimento} assim que possivel!")
+        print(f"{self.nome} comeu {alimento}")
         self.comendo = True
